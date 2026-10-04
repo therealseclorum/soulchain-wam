@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Soulchain WAM</title></head>
+<body style="margin:0;background:#080811;color:white;font-family:system-ui;padding:30px">
+  <h1>Soulchain WAM</h1>
+  <p>This page is only a direct smoke test. The official WAM host is recommended.</p>
+  <button id="start">Start audio</button>
+  <script type="module">
+    import Soulchain from "./index.js";
+    const ctx = new AudioContext();
+    document.querySelector("#start").onclick = async () => {
+      await ctx.resume();
+      // Full WAM hosts initialize the WAM environment/group automatically.
+      // This standalone page is intentionally only a placeholder.
+      alert("Use the WAM host for the actual plugin test.");
+    };
+  </script>
+</body>
+</html>
